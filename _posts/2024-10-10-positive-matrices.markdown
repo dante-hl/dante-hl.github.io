@@ -6,7 +6,7 @@ categories: jekyll update
 subtitle: "A conceptual intuition of positive matrices from which most core properties of definite matrices can be derived"
 ---
 {% katexmm %}
-This is the first part of what is hopefully a sequence of posts to help build intuition on linear algebra. I'm certainly not the first person to think of this - Gregory Gundersen has an extremely similar post here, but I stumbled across the idea myself and was proud of it so I'm writing this here anyways.
+This is the first part of what is hopefully a sequence of posts to help build intuition on linear algebra. I'm certainly not the first person to think of this - Gregory Gundersen has an extremely similar and arguably more intuitive post [here](https://gregorygundersen.com/blog/2022/02/27/positive-definite/), but I stumbled across the idea myself and was proud of it so I'm writing this here anyways.
 
 Here's an interesting, perhaps obvious property of positive numbers: when you multiply a positive number $p$ by any non-zero number $a$, the result lies on the same side of the number line as the original number $a$ did. Let's take the positive number $2$ as an example:
 $$
