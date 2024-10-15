@@ -8,7 +8,7 @@ subtitle: "A conceptual intuition of positive matrices from which most core prop
 {% katexmm %}
 This is the first part of what is hopefully a sequence of posts to help build intuition on linear algebra. I'm certainly not the first person to think of this - Gregory Gundersen has an extremely similar post here, but I stumbled across the idea myself and was proud of it so I'm writing this here anyways.
 
-Here's an interesting, perhaps obvious property of positive numbers: when you multiply a positive number $p$ by any non-zero number $a$, the result lies on the same side of the number line as the original number $a$ did. mple, Let's take the positive number $2$ as an example:
+Here's an interesting, perhaps obvious property of positive numbers: when you multiply a positive number $p$ by any non-zero number $a$, the result lies on the same side of the number line as the original number $a$ did. Let's take the positive number $2$ as an example:
 $$
 \begin{align*}
 2 \cdot 3 = 6 &\qquad \text{6 is on the same side of the number line as 3}\\
