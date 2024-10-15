@@ -26,11 +26,13 @@ rm -rf _site
 echo "Staging and committing to local gh-pages branch.."
 git add .
 git commit -m "Deploy site at $(date +%Y-%m-%d)"
-echo "Pushing to remote.."
+echo "Pushing website to remote (gh-pages).."
 git push origin gh-pages
 
 # switch back to main
 git switch main
+echo "Pushing Jekyll structure to remote (main).."
+git push origin main
 
 echo "Deployment complete!"
 
