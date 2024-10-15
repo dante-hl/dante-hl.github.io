@@ -1,11 +1,11 @@
 #!/bin/bash
 # check for uncommitted changes. if detected, exit script
-echo -e "Checking for uncommitted changes...\n"
+echo -e "Checking for uncommitted changes..."
 if [[ -n "$(git status -s)" ]]; then
     echo -e "You have uncommitted changes, please commit or stash them!"
     exit 1
 fi
-echo -e "\nNo uncommitted changes!\n"
+echo -e "No uncommitted changes! Switching to main and pulling from remote..\n"
 # switch to main, pull from origin, build website to _site
 git switch main
 git pull origin main
@@ -18,12 +18,12 @@ git switch gh-pages
 echo -e "\nRemoving all files except _site..\n"
 git rm -rf .
 # movie files in _site to root, remove _site
-echo -e "\nExploding contents of _site to root..\n"
+echo -e "\nExploding contents of _site to root.."
 mv _site/* .
 rm -rf _site
 
 # commit and push to gh-pages
-echo -e "\nStaging and committing to local gh-pages branch..\n"
+echo -e "Staging and committing to local gh-pages branch..\n"
 git add .
 git commit -m "Deploy site at $(date "+%Y-%m-%d %H:%M:%S")"
 echo -e "\nPushing website to remote (gh-pages)..\n"
