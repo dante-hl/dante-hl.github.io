@@ -1,7 +1,7 @@
 #!/bin/bash
 # check for uncommitted changes. if detected, exit script
 echo "Checking for uncommitted changes..."
-if [[ -z "$(git status -s)" ]]; then
+if [[ -n "$(git status -s)" ]]; then
     echo "You have uncommitted changes, please commit or stash them!"
     exit 1
 fi
