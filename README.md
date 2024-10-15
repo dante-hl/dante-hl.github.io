@@ -1,1 +1,1 @@
-I'm still trying to figure this out lol
+Personal website. Built off of Gregory Gundersen's [personal website](https://gregorygundersen.com/).
