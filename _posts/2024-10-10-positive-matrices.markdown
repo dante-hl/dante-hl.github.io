@@ -16,9 +16,9 @@ $$
 \end{align*}
 $$
 
-In other words, positive numbers are sign-preserving when viewed as multiplicative operators. To formalize that last part, a positive number $p$ corresponds to a linear map $p: \R \to \R$ defined by $p(a) = p \cdot a$ (show for yourself this is linear!)
+In other words, positive numbers can be associated with sign-preserving functions. To formalize that last part, a positive number $p$ corresponds to a linear map $p: \R \to \R$ defined by $p(a) = p \cdot a$ (show for yourself this is linear!)
 
-If you've taken a good linear algebra course, then you'll know that matrices correspond to linear maps. Then we can view positive definite matrices as generalizations of positive numbers to $\R^k$: **a positive definite matrix $P$ corresponds to a linear map that sends any non-zero vector $v$ to another vector $Pv$ that lies on the same half of the vector space as $v$ was.**
+If you've taken a good linear algebra course, then you'll know that matrices correspond to linear maps. Here's where the crucial piece of intuition comes in: we view positive definite matrices as generalizations of the above characterization of positive numbers to $\R^k$. **A positive definite matrix $P$ corresponds to a linear map that sends any non-zero vector $v$ to another vector $Pv$ that lies on the same half of the vector space as $v$ was.**
 
 How do we define "same half of the vector space as $v$"? With respect to $v$ itself! If you consider the set of all possible vectors that are orthogonal to $v$, the entirety of this set takes the shape of a hyperplane which divides your vector space in half. Then the 'side' that $v$ is on is simply the set of vectors $w$ such that the inner product $v^\top w > 0$. From this and our conceptual generalization above, we can derive the first definition of positive definite matrices $P$:
 
