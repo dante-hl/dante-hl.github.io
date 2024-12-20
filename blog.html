@@ -1,7 +1,5 @@
----
----
 <head>
-    <title>Dante Lokitiyakuln</title>
+    <title>Dante Lokitiyakul</title>
     <meta charset='UTF-8'>
     <meta content='width=device-width, initial-scale=1' name='viewport' />
 
@@ -108,22 +106,22 @@ MathJax.Hub.Config({
         </div>
         <div id='posts' class='section'>
 
-            {% for post in site.posts %}
+            
             <div class='post-row '>
                 <p class='post-title'>
-                    <a href="{{ post.url }}">
-                        {{ post.title }}
+                    <a href="/jekyll/update/2024/10/10/positive-matrices.html">
+                        Positive Matrices as Generalizations of Positive Numbers
                     </a>
                 </p>
                 <p class='post-date'>
-                    {{ post.date | date: "%d %B %Y" }}
+                    10 October 2024
                 </p>
             </div>
             <p class='post-subtitle'>
-                {{ post.subtitle }}
+                A conceptual intuition of positive matrices from which most core properties of definite matrices can be derived
             </p>
             <span class='hidden'>1</span>
-            {% endfor %}
+            
 
         </div>
         <!-- <div id='more'>
