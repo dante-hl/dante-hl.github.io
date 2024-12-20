@@ -12,6 +12,12 @@ git pull origin main
 echo -e "\nBuilding website to _site..\n"
 bundle exec jekyll build
 
+# Check if _site directory actually gets created (branch will always start without a _site dir)
+if [[ ! -d "_site" ]]; then
+    echo "Error: _site directory was not created. Jekyll build failed"
+    exit 1
+fi
+
 # switch to gh-pages
 git switch gh-pages
 # delete everything except _site
@@ -19,7 +25,7 @@ echo -e "\nRemoving all files except _site..\n"
 git rm -rf .
 # movie files in _site to root, remove _site
 echo -e "\nExploding contents of _site to root.."
-mv _site/* .
+mv _site/* .g
 rm -rf _site
 
 # commit and push to gh-pages
