@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# this deploy script builds the website (creating the _site directory) in main. _site is gitignored. it then switches to gh-pages, deletes everything except _site, moves the contents of _site to the root (and deletes _site), then stages, commits, and pushes to gh-pages remotely. 
+
 # check for uncommitted changes. if detected, exit script
 echo -e "Checking for uncommitted changes..."
 if [[ -n "$(git status -s)" ]]; then
@@ -23,9 +26,9 @@ git switch gh-pages
 # delete everything except _site
 echo -e "\nRemoving all files except _site..\n"
 git rm -rf .
-# movie files in _site to root, remove _site
+# move files in _site to root, remove _site
 echo -e "\nExploding contents of _site to root.."
-mv _site/* .g
+mv _site/* .
 rm -rf _site
 
 # commit and push to gh-pages
